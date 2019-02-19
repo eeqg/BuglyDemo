@@ -12,6 +12,9 @@
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 	<!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
 	
+	<uses-permission android:name="android.permission.READ_LOGS"/>
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+	
 	<!--Bugly升级SDK权限配置结束-->
 	
 	<application
@@ -22,6 +25,27 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
+		
+		<!-- bugly start -->
+		<!--bugly upgrade必须配置-->
+		<activity
+			android:name="com.tencent.bugly.beta.ui.BetaActivity"
+			android:configChanges="keyboardHidden|orientation|screenSize|locale"
+			android:theme="@android:style/Theme.Translucent"/>
+		
+		<!--bugly upgrade 必须配置 fileProvider，
+			注意： android:authorities="${applicationId}.fileProvider" 为你的包名.fileProvider-->
+		<provider
+			android:name="android.support.v4.content.FileProvider"
+			android:authorities="${applicationId}.fileProvider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/provider_paths"/>
+		</provider>
+		<!-- bugly end -->
+		
 		<activity android:name=".MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>

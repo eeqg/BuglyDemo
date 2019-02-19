@@ -11,7 +11,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="20dp"
-		android:text="55555-fixed"
+		android:text="00000992!!"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
 		app:layout_constraintTop_toTopOf="parent"/>
@@ -19,10 +19,29 @@
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginTop="45dp"
+		android:text="add3456789"
+		android:textColor="#f15585"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+	
+	<TextView
+		android:id="@+id/tvContent"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:text="Hello World!"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
 		app:layout_constraintTop_toTopOf="parent"/>
-
+	
+	<TextView
+		android:id="@+id/tvVersionInfo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		tools:text="v1.2"/>
 </android.support.constraint.ConstraintLayout>

@@ -1,11 +1,12 @@
 apply plugin: 'com.tencent.bugly.tinker-support'
 
-def bakPath = file("${buildDir}/bakApk/")
+//def bakPath = file("${buildDir}/bakApk/")
+def bakPath = file("./bakApk/")
 
 /**
  * 此处填写每次构建生成的基准包目录
  */
-def baseApkDir = "app-0117-17-36-42"
+def baseApkDir = "app-0219-14-35-58"
 
 /**
  * 对于插件各参数的详细解析请参考
