@@ -8,9 +8,9 @@ def bakPath = file("./bakApk/")
  */
 def baseApkDir = "app-0221-11-30-06"
 // 用于生成基准包（不用修改）
-//def myTinkerId = "base-" + rootProject.ext.versionName
+def myTinkerId = "base-" + rootProject.ext.versionName
 // 用于生成补丁包（每次生成补丁包都要修改一次，最好是 patch-${versionName}.x.x）
-def myTinkerId = "patch-" + rootProject.ext.versionName + ".${rootProject.ext.patchVersion}"
+//def myTinkerId = "patch-" + rootProject.ext.versionName + ".${rootProject.ext.patchVersion}"
 
 /**
  * 对于插件各参数的详细解析请参考

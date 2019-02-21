@@ -26,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
 		
 		tvContent = findViewById(R.id.tvContent);
 		
-		// Beta.checkUpgrade();
-		
-		// loadUpgradeInfo();
+		//检查是否有新版本
+		Beta.checkUpgrade();
+		//info
+		loadUpgradeInfo();
 	}
 	
 	private void loadUpgradeInfo() {
