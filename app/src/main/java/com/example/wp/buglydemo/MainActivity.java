@@ -19,12 +19,16 @@ public class MainActivity extends AppCompatActivity {
 		
 		TextView tvVersionInfo = findViewById(R.id.tvVersionInfo);
 		tvVersionInfo.setText(String.format("v%s %s", BuildConfig.VERSION_NAME, BuildConfig.BUILD_TYPE));
+		if (BuildConfig.PATCH_VERSION > 0) {
+			TextView tvPatchInfo = findViewById(R.id.tvPatchInfo);
+			tvPatchInfo.setText(String.format("patch-%s", BuildConfig.PATCH_VERSION));
+		}
 		
 		tvContent = findViewById(R.id.tvContent);
 		
-		Beta.checkUpgrade();
+		// Beta.checkUpgrade();
 		
-		loadUpgradeInfo();
+		// loadUpgradeInfo();
 	}
 	
 	private void loadUpgradeInfo() {
